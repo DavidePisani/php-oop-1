@@ -49,16 +49,16 @@ $worldwarz = new Movie('World War Z', 'Zombie');
             <img src="<?php echo $avatar->poster ?>" alt="<?php echo $avatar->title ?>">
             <h2>Film: <?php echo $avatar->title; ?></h2>
             <div>Genere: <?php echo $avatar->genre; ?></div>
-            <div>Trama:<?php echo $avatar->plot(); ?> </div>
+            <div>Trama: <?php echo $avatar->plot(); ?> </div>
             <div>Durata: <?php echo $avatar->duration;  ?></div>
         </div>
         
         <div class="card">
             <img src="<?php echo $worldwarz->poster ?>" alt="<?php echo $worldwarz->title ?>">
-            <h2>Film:<?php echo $worldwarz->title; ?></h2>
-            <div>Genere:<?php echo $worldwarz->genre; ?> </div>
-            <div>Trama:<?php echo $worldwarz->plot(); ?> </div>
-            <div>Durata:<?php echo $worldwarz->duration; ?></div>
+            <h2>Film: <?php echo $worldwarz->title; ?></h2>
+            <div>Genere: <?php echo $worldwarz->genre; ?> </div>
+            <div>Trama: <?php echo $worldwarz->plot(); ?> </div>
+            <div>Durata: <?php echo $worldwarz->duration; ?></div>
         </div>
     </div>  
 </body>
