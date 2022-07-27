@@ -9,27 +9,28 @@ class Movie {
 
     public $poster;
 
+    public $plot;
+
     public function __construct($_title, $_genre) {
         $this->title = $_title;
         $this->genre = $_genre;
     }   
    
-    public function plot(){
-        if($this->title === 'Avatar'){
-            return "L'ex marine Jake Sully è stato reclutato per una missione sul pianeta Pandora con lo scopo di recuperare risorse naturali in esaurimento sulla Terra. Inaspettatamente si ritrova a voler proteggere il mondo magico al quale si sente stranamente legato.";
-        }elseif( $this->title === 'World War Z'){
-            return "Quando una pandemia di zombie minaccia di distruggere l'umanità, un ex investigatore americano è costretto a riprendere il lavoro per rintracciare la fonte dell'infezione e impedire il peggio";
-        }
+    public function getPlot(){
+        return $this->plot;
     }
 }
     
 $avatar = new Movie('Avatar', 'Fantascianza');
     $avatar->duration = '2.40h';
     $avatar->poster = 'https://pad.mymovies.it/filmclub/2008/03/090/locandina.jpg';
+    $avatar->plot ="L'ex marine Jake Sully è stato reclutato per una missione sul pianeta Pandora con lo scopo di recuperare risorse naturali in esaurimento sulla Terra. Inaspettatamente si ritrova a voler proteggere il mondo magico al quale si sente stranamente legato.";
+
 
 $worldwarz = new Movie('World War Z', 'Zombie');
     $worldwarz->duration = '1.56h'; 
-    $worldwarz->poster ='http://aforismi.meglio.it/img/film/World_war_Z.jpg'; 
+    $worldwarz->poster ='http://aforismi.meglio.it/img/film/World_war_Z.jpg';
+    $worldwarz->plot = "Quando una pandemia di zombie minaccia di distruggere l'umanità, un ex investigatore americano è costretto a riprendere il lavoro per rintracciare la fonte dell'infezione e impedire il peggio"
 ?>
 
  
@@ -49,7 +50,7 @@ $worldwarz = new Movie('World War Z', 'Zombie');
             <img src="<?php echo $avatar->poster ?>" alt="<?php echo $avatar->title ?>">
             <h2>Film: <?php echo $avatar->title; ?></h2>
             <div>Genere: <?php echo $avatar->genre; ?></div>
-            <div>Trama: <?php echo $avatar->plot(); ?> </div>
+            <div>Trama: <?php echo $avatar->getPlot(); ?> </div>
             <div>Durata: <?php echo $avatar->duration;  ?></div>
         </div>
         
@@ -57,7 +58,7 @@ $worldwarz = new Movie('World War Z', 'Zombie');
             <img src="<?php echo $worldwarz->poster ?>" alt="<?php echo $worldwarz->title ?>">
             <h2>Film: <?php echo $worldwarz->title; ?></h2>
             <div>Genere: <?php echo $worldwarz->genre; ?> </div>
-            <div>Trama: <?php echo $worldwarz->plot(); ?> </div>
+            <div>Trama: <?php echo $worldwarz->getPlot(); ?> </div>
             <div>Durata: <?php echo $worldwarz->duration; ?></div>
         </div>
     </div>  
