@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color:  rgb(17, 22, 43) ;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+}
+
+.card{
+    width: 40%;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+.card > div{
+    padding-block: 5px;
+}
+
+.card > img{
+    width: 70%;
+    height: 70%;
+
+
+}
